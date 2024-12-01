@@ -4,7 +4,7 @@ import { StyleSheet, Text } from 'react-native';
 export default function App() {
     return (
       <Text style={{height:"100%",alignItems:"center"}}>
-        <Text style={styles.Text}>ShivLing</Text>
+        <Text style={styles.Text}>RACHANA</Text>
       </Text>
     );
 }
