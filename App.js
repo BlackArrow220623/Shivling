@@ -5,7 +5,7 @@ export default function App() {
     return (
 
       <View style={{backgroundColor:"#fff"}} >
-        <Text style={styles.Text}>ShivLing</Text>
+        <Text style={styles.Text}>hii</Text>
       </View>
     );
 }
