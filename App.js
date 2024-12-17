@@ -1,17 +1,21 @@
-import React from 'react';
-import { StyleSheet, Text , View} from 'react-native';
+
+import * as React from 'react';
+import { View, Text } from 'react-native';
+import { createStaticNavigation } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { NavigationContainer } from '@react-navigation/native';
 import Home from './pages/Home';
 
-export default function App() {
-    return <Home/>;
+const stack = createNativeStackNavigator();
+
+function App() {
+  return (
+    <NavigationContainer>
+      <stack.Navigator screenOptions={{headerShown: false}}>
+        <stack.Screen name='Home' component={Home}/>
+      </stack.Navigator>
+    </NavigationContainer>
+  );
 }
 
-const styles = StyleSheet.create({
-  Text:{
-    fontSize:25,
-    justifyContent:"center",
-    alignItems:"center",
-    alignContent:"center"
-  }
-});
-
+export default App;
