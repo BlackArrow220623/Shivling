@@ -1,10 +1,13 @@
 import { View, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
 
-const Btn = (btnLable, bgColor, textColor) => {
+const Btn = ({btnLable, bgColor, textColor,Press }) => {
     return (
-        <TouchableOpacity style={{ backgroundColor: bgColor, borderRadius: 100, alignItems: 'center', width: 250 }}>
-            <Text style={{ color: textColor, fontSize: 30, fontWeight: 'bold' }}>{btnLable}</Text>
+        <TouchableOpacity 
+        onPress={Press}
+        
+        style={{ backgroundColor: bgColor, borderRadius: 100, alignItems: 'center', width: 200 , borderRadius: 40}}>
+            <Text style={{ color: textColor, fontSize: 20, fontWeight: 'bold', padding:10 }}>{btnLable}</Text>
 
         </TouchableOpacity>
     )
