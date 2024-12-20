@@ -7,20 +7,20 @@ import { Blue, darkBlue } from './Constants';
 
 function Home(props) {
   return (
-    <View style={{ backgroundColor:'#7FC7EB',}} >
-      <Text style={{color:'white', fontSize: 50, fontWeight: 700, textAlign:'center',  padding:80, backgroundColor: '#7FC7EB'}}>
+    <View style={{ backgroundColor:'#7FC7EB', paddingBottom:'100%'}} >
+      <Text style={{color:'white', fontSize: 50, fontWeight: 700, textAlign:'center',  paddingTop:180, paddingBottom: 30, backgroundColor: '#7FC7EB'}}>
         SHIVLING
         </Text>
 
-      
-       {/* <Text style={{display:'flex', padding:40, alignItems:'center', textAlign:'center', }}>
-       <Button style={{width:150,}}>SignIn</Button>
-       <Button style={{width:150}}>SignUp</Button>
-       </Text> */}
+        <Text style={{textAlign:'center' , alignItems:'center', fontSize:50, paddingBottom:70}}>
+          Logo
+        </Text>
+
+
 
        <Text>
-       <Btn bgColor={Blue} textColor='white' btnLable='SignIn' Press={() => props.navigation.navigate('SignIn')}></Btn>
-       <Btn bgColor='white' textColor={Blue} btnLable='SignUp'  Press={() => props.navigation.navigate('SignUp')}  ></Btn>
+       <Btn bgColor={Blue} textColor='white' btnLable='Sign In' Press={() => props.navigation.navigate('SignIn')}></Btn>
+       <Btn bgColor='white' textColor={Blue} btnLable='Sign Up'  Press={() => props.navigation.navigate('SignUp')}  ></Btn>
        </Text>
 
 
