@@ -3,6 +3,8 @@ import { StyleSheet, Text, View} from 'react-native';
 import Btn from './Btn';
 import { Button } from '@react-navigation/elements';
 import { Blue, darkBlue } from './Constants';
+import Icon from 'react-native-vector-icons/MaterialIcons';
+
 
 
 function Home(props) {
@@ -15,6 +17,10 @@ function Home(props) {
         <Text style={{textAlign:'center' , alignItems:'center', fontSize:50, paddingBottom:70}}>
           Logo
         </Text>
+        
+      
+
+        
 
 
 

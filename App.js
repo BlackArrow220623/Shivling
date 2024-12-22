@@ -9,6 +9,7 @@ import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import FirstPage from './pages/FirstPage';
 import ForgotPasswd from './pages/ForgotPasswd';
+import ResetPassword from './pages/ResetPassword';
 
 const stack = createNativeStackNavigator();
 
@@ -21,6 +22,8 @@ function App() {
         <stack.Screen name='SignUp' component={SignUp}/>
         <stack.Screen name='FirstPage' component={FirstPage}/>
         <stack.Screen name='ForgotPasswd' component={ForgotPasswd}/>
+        <stack.Screen name='ResetPassword' component={ResetPassword}/>
+
       </stack.Navigator>
     </NavigationContainer>
   );
