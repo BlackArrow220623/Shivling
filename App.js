@@ -1,20 +1,34 @@
-import React from 'react';
-import { StyleSheet, Text , View} from 'react-native';
 
-export default function App() {
-    return (
-      <Text style={{height:"100%",alignItems:"center"}}>
-        <Text style={styles.Text}>RACHANA</Text>
-      </Text>
-    );
+
+import * as React from 'react';
+import { View, Text } from 'react-native';
+import { createStaticNavigation } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { NavigationContainer } from '@react-navigation/native';
+import Home from './pages/Home';
+import SignIn from './pages/SignIn';
+import SignUp from './pages/SignUp';
+import FirstPage from './pages/FirstPage';
+import ForgotPasswd from './pages/ForgotPasswd';
+import ResetPassword from './pages/ResetPassword';
+
+const stack = createNativeStackNavigator();
+
+
+function App() {
+  return (
+    <NavigationContainer>
+      <stack.Navigator screenOptions={{headerShown: false}}>
+        <stack.Screen name='Home' component={Home}/>
+        <stack.Screen name='SignIn' component={SignIn}/>
+        <stack.Screen name='SignUp' component={SignUp}/>
+        <stack.Screen name='FirstPage' component={FirstPage}/>
+        <stack.Screen name='ForgotPasswd' component={ForgotPasswd}/>
+        <stack.Screen name='ResetPassword' component={ResetPassword}/>
+
+      </stack.Navigator>
+    </NavigationContainer>
+  );
 }
 
-const styles = StyleSheet.create({
-  Text:{
-    fontSize:25,
-    justifyContent:"center",
-    alignItems:"center",
-    alignContent:"center"
-  }
-});
-
+export default App;
