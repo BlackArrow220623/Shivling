@@ -28,7 +28,7 @@ function App() {
         <stack.Screen name='FirstPage' component={FirstPage}/>
         <stack.Screen name='ForgotPasswd' component={ForgotPasswd}/>
         <stack.Screen name='ResetPassword' component={ResetPassword}/>
-        <stack.Screen name='TaskPage' component={TaskPage}/>
+        <stack.Screen name='TaskPage' component={TaskPage} />
         <stack.Screen name='MainPage' component={MainPage}/>
         <stack.Screen name="Present" component={Present} />
         
