@@ -1,4 +1,4 @@
-import { View, Text,Image } from 'react-native'
+import { View, Text, Image } from 'react-native'
 import React from 'react'
 import 'react-native-gesture-handler';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
@@ -37,7 +37,7 @@ const FirstPage = () => {
       <Tab.Screen name="MainPage" component={MainPage} />
       <Tab.Screen name="Present" component={Present} />
       <Tab.Screen name="TaskPage" component={TaskPage} />
-      
+
     </Tab.Navigator>
 
   )

@@ -14,6 +14,12 @@ import ResetPassword from './pages/ResetPassword';
 import TaskPage from './pages/TaskPage';
 import MainPage from './pages/MainPage';
 import Present from './pages/Present';
+import HomeScreen from './src/screens/HomeScreen';
+import WelcomeScreen from './src/screens/WelcomeScreen';
+import LoginScreen from './src/screens/LoginScreen';
+import SignUpScreen from './src/screens/SignUpScreen';
+
+
 
 const stack = createNativeStackNavigator();
 
@@ -21,8 +27,13 @@ const stack = createNativeStackNavigator();
 function App() {
   return (
     <NavigationContainer>
-      <stack.Navigator screenOptions={{headerShown: false}}>
-        <stack.Screen name='Home' component={Home}/>
+      <stack.Navigator initialRouteName='WelcomeScreen'>
+        <stack.Screen name='HomeScreen' options={{headerShown: false}} component={HomeScreen}/>
+        <stack.Screen name='WelcomeScreen' options={{headerShown: false}} component={WelcomeScreen}/>
+        <stack.Screen name='LoginScreen' options={{headerShown: false}} component={LoginScreen}/>
+        <stack.Screen name='SignUpScreen' options={{headerShown: false}} component={SignUpScreen}/>
+
+        <stack.Screen name='Home'  component={Home}/>
         <stack.Screen name='SignIn' component={SignIn}/>
         <stack.Screen name='SignUp' component={SignUp}/>
         <stack.Screen name='FirstPage' component={FirstPage}/>
@@ -31,11 +42,6 @@ function App() {
         <stack.Screen name='TaskPage' component={TaskPage} />
         <stack.Screen name='MainPage' component={MainPage}/>
         <stack.Screen name="Present" component={Present} />
-        
-
-        
-        
-
       </stack.Navigator>
     </NavigationContainer>
   );
